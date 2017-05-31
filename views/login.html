@@ -1,0 +1,19 @@
+<md-content class="content" layout="row" flex="100" layout-align="center center" layout-padding layout-nowrap>
+    <div flex="45" flex-xs="100" flex-sm="80" flex-md="80" flex-gt-md="45"  class="challenge" layout-margin>
+        <div flex="100" class="question" >
+            <form name="userForm">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Name</label>
+                    <input md-maxlength="30" required name="name" ng-model="user.name"/>
+
+                    <div class="hint" ng-if="showHints">Tell us what we should call you!</div>
+
+                    <div ng-if="!showHints">
+                        <div style="color: crimson">Name is required.</div>
+                    </div>
+                    <md-button class="md-raised md-primary submit" ng-click="submit()"> Submit</md-button>
+                </md-input-container>
+            </form>
+        </div>
+    </div> 
+</md-content>
